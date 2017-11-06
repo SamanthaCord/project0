@@ -1,3 +1,54 @@
 body {
-  background-color: blue; 
+  margin: 0 auto;
+  padding: 0;
+  background-color: #e3e3e3;
+  max-height: 400px;
+  max-width: 1200px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  padding-top: 100px;
+}
+
+.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #1863ec;
+  background-color: #1863ec;
+}
+
+.buttonContainer {
+  margin: 20px;
+  margin-left: 30px;
+  display: inline-block;
+}
+
+.playerButton {
+  width: 100px;
+  height: 100px;
+  border-radius: 150px;
+  border: 1px solid #46f546;
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  background-color: #46f546;
+}
+
+.zmdi-hc-5x {
+  position: relative;
+    margin: 10px;
+    padding-left: 10px;
+}
+
+.zmdi-face {
+  padding-left: 6px;
+}
+
+.playerHeading {
+  font-weight: 300;
+  margin: 20px;
+  padding-left: 10px;
 }

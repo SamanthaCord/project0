@@ -75,6 +75,7 @@ const winLogic = function () {
   //its a draw
   if (turns >= 9) {
     console.log('Its a draw!');
+    drawScreen();
   }
 //winning combination 1
   if ((gameBoard[0][1] === 'X') && (gameBoard[1][1] === 'X') && (gameBoard[2][1] === 'X')) {

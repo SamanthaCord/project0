@@ -6,6 +6,11 @@ const winnerScreen = function () {
   $('.winnertext').css("display", "block");
 }
 
+const drawScreen = function () {
+  $('#win').addClass('winOverlay');
+  $('.drawtext').css("display", "block");
+}
+
 $(document).ready(function () {
   console.log("document ready");
 

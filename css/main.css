@@ -25,9 +25,19 @@ body {
 
 .winnertext {
   text-align: center;
-  color: red;
+  color: yellow;
   font-size: 120px;
   width: 50%;
+  padding: 185px 0;
+  margin: auto;
+  display: none;
+}
+
+.drawtext {
+  text-align: center;
+  color: red;
+  font-size: 120px;
+  width: 56%;
   padding: 185px 0;
   margin: auto;
   display: none;
@@ -37,6 +47,7 @@ body {
   max-width: 400px;
   padding-top: 100px;
   display: inline-block;
+  margin: auto 0;
 }
 
 .box {

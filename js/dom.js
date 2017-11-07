@@ -1,19 +1,31 @@
 
 //check document is ready//
 
+const resetGame = function () {
+  $('.resetButton').on('click', function () {
+  location.reload();
+  })
+}
+
 const winner1Screen = function () {
   $('#win').addClass('winOverlay');
-  $('.winner1text').css("display", "block");
+  $('.winner1text').css("display", "inline-block");
+  $('.resetButton').css("display", "inline-block");
+  resetGame();
 }
 
 const winner2Screen = function () {
   $('#win').addClass('winOverlay');
-  $('.winner2text').css("display", "block");
+  $('.winner2text').css("display", "inline-block");
+  $('.resetButton').css("display", "inline-block");
+  resetGame();
 }
 
 const drawScreen = function () {
   $('#win').addClass('winOverlay');
-  $('.drawtext').css("display", "block");
+  $('.drawtext').css("display", "inline-block");
+  $('.resetButton').css("display", "inline-block");
+  resetGame();
 }
 
 

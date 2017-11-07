@@ -11,6 +11,14 @@ const winner1Screen = function () {
   $('#win').addClass('winOverlay');
   $('.winner1text').css("display", "inline-block");
   $('.resetButton').css("display", "inline-block");
+  if (localStorage.winner1Screen) {
+    localStorage.winner1Screen = Number(localStorage.winner1Screen) + 1;
+} else {
+    localStorage.winner1Screen = 1;
+}
+$('#resultPizza').css("display", "inline-block");
+document.getElementById("resultPizza").innerHTML = "Total Wins: " +
+localStorage.winner1Screen;
   resetGame();
 }
 
@@ -18,6 +26,14 @@ const winner2Screen = function () {
   $('#win').addClass('winOverlay');
   $('.winner2text').css("display", "inline-block");
   $('.resetButton').css("display", "inline-block");
+  if (localStorage.winner2Screen) {
+    localStorage.winner2Screen = Number(localStorage.winner2Screen) + 1;
+} else {
+    localStorage.winner2Screen = 1;
+}
+$('#resultFace').css("display", "inline-block");
+document.getElementById("resultFace").innerHTML = "Total Wins: " +
+localStorage.winner2Screen;
   resetGame();
 }
 

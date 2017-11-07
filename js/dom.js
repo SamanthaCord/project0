@@ -57,11 +57,13 @@ $('#box1').on('click', function () {
     player1(0,0);
     $('#box1').append('<i class="zmdi zmdi-pizza zmdi-hc-5x"></i>');
     $('#box1').css("background-color", "#f60a84");
+    isRunning = true;
   }
 else if (player2Turn && gameBoard[0][0] === '_'){
   player2(0,0);
   $('#box1').append('<i class="zmdi zmdi-face zmdi-hc-5x"></i>');
   $('#box1').css("background-color", "#f6580a");
+  isRunning = true;
 }
 })
 
@@ -72,11 +74,13 @@ $('#box2').on('click', function () {
     player1(0,1);
     $('#box2').append('<i class="zmdi zmdi-pizza zmdi-hc-5x"></i>');
     $('#box2').css("background-color", "#f60a84");
+    isRunning = true;
   }
 else if (player2Turn && gameBoard[0][1] === '_') {
   player2(0,1);
   $('#box2').append('<i class="zmdi zmdi-face zmdi-hc-5x"></i>');
   $('#box2').css("background-color", "#f6580a");
+  isRunning = true;
 }
 })
 
@@ -87,11 +91,13 @@ if (player1Turn && gameBoard[0][2] === '_') {
     player1(0,2);
     $('#box3').append('<i class="zmdi zmdi-pizza zmdi-hc-5x"></i>');
     $('#box3').css("background-color", "#f60a84");
+    isRunning = true;
   }
 else if (player2Turn && gameBoard[0][2] === '_') {
   player2(0,2);
   $('#box3').append('<i class="zmdi zmdi-face zmdi-hc-5x"></i>');
   $('#box3').css("background-color", "#f6580a");
+  isRunning = true;
 }
 })
 
@@ -102,11 +108,13 @@ $('#box4').on('click', function () {
     player1(1,0);
     $('#box4').append('<i class="zmdi zmdi-pizza zmdi-hc-5x"></i>');
     $('#box4').css("background-color", "#f60a84");
+    isRunning = true;
   }
 else if (player2Turn && gameBoard[1][0] === '_') {
   player2(1,0);
   $('#box4').append('<i class="zmdi zmdi-face zmdi-hc-5x"></i>');
   $('#box4').css("background-color", "#f6580a");
+  isRunning = true;
 }
 })
 
@@ -117,11 +125,13 @@ $('#box5').on('click', function () {
     player1(1,1);
     $('#box5').append('<i class="zmdi zmdi-pizza zmdi-hc-5x"></i>');
     $('#box5').css("background-color", "#f60a84");
+    isRunning = true;
   }
 else if (player2Turn && gameBoard[1][1] === '_') {
   player2(1,1);
   $('#box5').append('<i class="zmdi zmdi-face zmdi-hc-5x"></i>');
   $('#box5').css("background-color", "#f6580a");
+  isRunning = true;
 }
 })
 
@@ -132,11 +142,13 @@ $('#box6').on('click', function () {
     player1(1,2);
     $('#box6').append('<i class="zmdi zmdi-pizza zmdi-hc-5x"></i>');
     $('#box6').css("background-color", "#f60a84");
+    isRunning = true;
   }
 else if (player2Turn && gameBoard[1][2] === '_') {
   player2(1,2);
   $('#box6').append('<i class="zmdi zmdi-face zmdi-hc-5x"></i>');
   $('#box6').css("background-color", "#f6580a");
+  isRunning = true;
 }
 })
 
@@ -147,11 +159,13 @@ $('#box7').on('click', function () {
     player1(2,0);
     $('#box7').append('<i class="zmdi zmdi-pizza zmdi-hc-5x"></i>');
     $('#box7').css("background-color", "#f60a84");
+    isRunning = true;
   }
 else if (player2Turn && gameBoard[2][0] === '_') {
   player2(2,0);
   $('#box7').append('<i class="zmdi zmdi-face zmdi-hc-5x"></i>');
   $('#box7').css("background-color", "#f6580a");
+  isRunning = true;
 }
 })
 
@@ -162,11 +176,13 @@ $('#box8').on('click', function () {
     player1(2,1);
     $('#box8').append('<i class="zmdi zmdi-pizza zmdi-hc-5x"></i>');
     $('#box8').css("background-color", "#f60a84");
+    isRunning = true;
   }
 else if (player2Turn && gameBoard[2][1] === '_') {
   player2(2,1);
   $('#box8').append('<i class="zmdi zmdi-face zmdi-hc-5x"></i>');
   $('#box8').css("background-color", "#f6580a");
+  isRunning = true;
 }
 })
 
@@ -177,11 +193,13 @@ $('#box9').on('click', function () {
     player1(2,2);
     $('#box9').append('<i class="zmdi zmdi-pizza zmdi-hc-5x"></i>');
     $('#box9').css("background-color", "#f60a84");
+    isRunning = true;
   }
 else if (player2Turn && gameBoard[2][2] === '_') {
   player2(2,2);
   $('#box9').append('<i class="zmdi zmdi-face zmdi-hc-5x"></i>');
   $('#box9').css("background-color", "#f6580a");
+  isRunning = true;
 }
 })
 

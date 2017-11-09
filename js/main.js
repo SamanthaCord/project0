@@ -1,82 +1,85 @@
 
 //console.log("working");
 
-///////////global variables////////
+////////////////////GLOBAL VARIABLES///////////////////
 
-const gameBoard = [
+const gameBoard = [         //game board//
   ['_', '_', '_'],
   ['_', '_', '_'],
   ['_', '_', '_']
 ]
 
-let player1Turn = true;   //variable to indicate if player1 can go
-let player2Turn = true;  // variable to indicate if player2 can go
+let player1Turn = true;   //flag to indicate if player1 take a turn
+let player2Turn = true;  // flag to indicate if player2 take a turn
 
 let win = false; // indicates whether the game has been won
 
 let turns = 0; //indicates how many turns have been taken
 
-let isRunning = false;
+let isRunning = false;    //indicates whether the game has started or not
 
 
-//////////////////////////////////////////
+//////////////////////////////////////////////
 
 
-//function for player1 turn
+//function for player1 turn//
+
 const player1 = function (array, index) {
   if (win) {
     console.log('Game Over, we have a winner!');
   } else {
-    if (player1Turn) {
-      //can't override another players inputs
-      //if statement for if the index is === 'X' or === 'O' this square is already take
+    if (player1Turn) {          //will only run it its that players turn
+      //if statement for if the index is === 'X' or === 'O' this square is already taken
       if (gameBoard[array][index] === 'X' || gameBoard[array][index] === 'O') {
         console.log('This square is already taken');
       } else {
+        //allow that player to successfully put an X in the gameboard array//
         gameBoard[array][index] = 'X';
         console.log(gameBoard[array][index]);
-        turns += 1;
-        winLogic();
-        player1Turn = false;
-        player2Turn = true;
+        turns += 1;           //add a turn to the total count
+        winLogic();           //run winLogic to see if there is a winner yet
+        player1Turn = false;  //flag to indicate it is no longer player 1's turn
+        player2Turn = true;   //flag to indicate it is now player 2's turn
 
       }
     } else {
-      console.log("Its not your turn!");
+      console.log("Its not your turn!");    //will not let player 1 go if it's not their turn
     }
   }
 }
 
-//function for player2 turn
+//function for player2 turn//
+
 const player2 = function (array, index) {
 
   if (win) {
     console.log('Game Over, we have a winner!');
   } else {
-    if (player2Turn === true) {
-      //can't override another players inputs
-      //if statement for if the index is === 'X' or === 'O' this square is already take
+    if (player2Turn === true) {       //will only run it its that players turn
+      //if statement for if the index is === 'X' or === 'O' this square is already taken
       if (gameBoard[array][index] === 'X' || gameBoard[array][index] === 'O') {
           console.log('This square is already taken');
         } else {
+          //allow that player to successfully put an O in the gameboard array//
           gameBoard[array][index] = 'O';
           console.log(gameBoard[array][index]);
-          turns += 1;
-          winLogic();
-          player2Turn = false;
-          player1Turn = true;
+          turns += 1;             //add a turn to the total count
+          winLogic();            //run winLogic to see if there is a winner yet
+          player2Turn = false;   //flag to indicate it is no longer player 2's turn
+          player1Turn = true;   //flag to indicate it is now player 1's turn
         }
     } else {
-        console.log("Its not your turn!");
+        console.log("Its not your turn!");  //will not let player 1 go if it's not their turn
     }
   }
 }
 
-/////reset function/////////////
 
 
-//work on winning game logic
-//if this combination X has won , repeat for all possible combos
+/////////////CHECKING TO SEE IF GAME IS WON. POSSIBLE WIN COMBINATIONS////////////////
+
+//if this combination X has won , repeat for all possible combos//
+
 const winLogic = function () {
 //winning combination 1
   if ((gameBoard[0][1] === 'X') && (gameBoard[1][1] === 'X') && (gameBoard[2][1] === 'X')) {
@@ -126,7 +129,9 @@ const winLogic = function () {
     win = true;
     winner2Screen();
   }
-  //if this combination O has won , repeat for all possible combos
+
+  //if this combination O has won , repeat for all possible combos//
+
   //winning combination 9
   else if ((gameBoard[0][1] === 'O') && (gameBoard[1][1] === 'O') && (gameBoard[2][1] === 'O')) {
     console.log('player2 won!');
@@ -175,7 +180,7 @@ const winLogic = function () {
     win = true;
     winner2Screen();
   }
-  //its a draw
+  // else if 9 turns have been taken, its a draw
   else if (turns >= 9) {
     console.log('Its a draw!');
     drawScreen();
@@ -217,11 +222,8 @@ const winLogic = function () {
 // console.log(gameBoard);
 
 
-//function so if no-one wins after 9 turns return 'its a draw'
-
-
 ////////////////////////////* NOTES ON FLAGS *//////////////////////////////////
-// turns create boolean variables that show when x goes true, if x goes again its false = to determine when its each players turns
+// turns create boolean variables that show when x turn is true, if x goes again its false = to determine when its each players turns
 //use flags to indicate when a player can take their turn
 //create flag for both players turns
 //when that player takes their turn, turn the flag to false
